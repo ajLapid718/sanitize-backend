@@ -1,23 +1,18 @@
 const Sequelize = require('sequelize');
 const db = require('../db');
 
-const Player = db.define("player", {
+const Item = db.define("item", {
 
-  firstName: {
+  name: {
     type: Sequelize.STRING,
     allowNull: false
   },
 
-  lastName: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-
-  jerseyNumber: {
+  price: {
     type: Sequelize.INTEGER,
     allowNull: false
   }
 
 });
 
-module.exports = Player;
+module.exports = Item;
