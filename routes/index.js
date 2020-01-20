@@ -3,9 +3,11 @@ const router = express.Router();
 
 // Subrouters;
 const itemsRouter = require('./items');
+const ordersRouter = require('./orders');
 
 // Mount our subrouters to assemble our apiRouter;
 router.use('/items', itemsRouter);
+router.use('/orders', ordersRouter);
 
 // Error handling middleware;
 router.use((req, res, next) => {
